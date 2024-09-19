@@ -1,0 +1,16 @@
+# 1. Bug Collector
+
+total = 0;
+num_days =0;
+for i in range(5):
+  total += int(input("How many bugs did you collect? "))
+print(total)
+
+
+# 2. Calories Burned
+
+minutes = [10, 15, 20, 25, 30]
+for i in minutes:
+  total += i*4.2
+
+# 10. (only up to Q10)
