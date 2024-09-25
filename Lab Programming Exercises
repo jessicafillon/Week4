@@ -1,7 +1,7 @@
 # 1. Bug Collector
 
 total = 0;
-num_days =0;
+num_days = 0;
 for i in range(5):
   total += int(input("How many bugs did you collect? "))
 print(total)
@@ -12,5 +12,27 @@ print(total)
 minutes = [10, 15, 20, 25, 30]
 for i in minutes:
   total += i*4.2
+
+
+# 3. Budget Analysis
+
+total_expense = 0
+budget = float(input("Monthly Budget: "))
+while True:
+    expense = input("Enter an expense or 'stop' to finish: ")
+    if expense.lower() == 'stop':
+        break
+    else:
+        total_expense += float(expense)
+if total_expense > budget:
+    print(f'You are ${total_expense - budget} over your budget!')
+else:
+    print(f'Total monthly expenses: {total_expense}')
+
+
+# 4. Distance Traveled
+
+
+
 
 # 10. (only up to Q10)
