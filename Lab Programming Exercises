@@ -32,7 +32,71 @@ else:
 
 # 4. Distance Traveled
 
+total_distance = 0
+speed = int(input("Speed of Vehicle: "))
+hours = int(input("Hours Traveled: "))
+for i in range(hours):
+    distance = int(input("Distance Traveled After 1 Hour: "))
+    total_distance += distance
+    print(f' Hour: {i+1} \t \t Distance Traveled: {total_distance}')
 
 
+# 5. Average Rainfall
 
-# 10. (only up to Q10)
+total_rainfall = 0
+monthly_rainfall = 0
+years = int(input("Number of Years: "))
+
+for i in range(years):
+    for months in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]:
+        rainfall = float(input("Inches of Rainfall for This Month: "))
+        monthly_rainfall += rainfall
+    total_rainfall += monthly_rainfall
+    print(f'\nInches of Rainfall for This Year: {monthly_rainfall}\n')
+    
+print(f'\nMonths: {years * 12} \nTotal Inches of Rainfall: {total_rainfall} \nAverage Rainfall per Month: {total_rainfall / (years * 12):.2f}')
+
+# 6. Celsius to Fahrenheit Table
+
+print(f'Celsius = Fahrenheit')
+for i in range(21):
+    f = (9/5)*(i)+32
+    print(f'{i} = {f:.1f}')
+
+
+# 7. Pennies for Pay
+
+total_pennies = 1
+days = int(input("Number of days working: "))
+print(f'\nDay 1 Pennies: 1')
+for i in range(1, days):
+    pennies = 2**i
+    print(f'Day {i+1} Pennies: {pennies}')
+    total_pennies += pennies
+print(f'\nTotal Pennies: {total_pennies}')
+
+
+# 8. Sum of Numbers
+
+num_sum = 0
+while True:
+    num = int(input("Enter a positive number, or enter a negative number to stop: "))
+    num_sum += num
+    if num < 0:
+        print(f'\nSum of Numbers: {num_sum-num}')
+        break
+
+
+# 9. Ocean Levels
+
+ocean_level = 0
+for i in range(25):
+    print(f'Year {i+1} Ocean Level: +{1.6+ocean_level:.1f} millimeters')
+    ocean_level += 1.6
+
+
+# 10. Tuition Increase
+
+for i in range(6):
+    tuition = 8000+(8000*(0.03*i))
+    print(f'Year {i} Tuition (per semester): {tuition}')
